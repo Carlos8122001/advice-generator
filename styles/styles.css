@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+}
+
+.advice {
+  width: 60%;
+  max-width: 420px;
+  height: 44vh;
+  border-radius: 3%;
+  background-color: hsl(217, 19%, 24%);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.advice__id {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-align: center;
+  color: hsl(150, 100%, 66%);
+  margin-top: 0.625rem;
+  margin-bottom: 20px;
+}
+
+.advice__text {
+  font-size: 23px;
+  text-align: center;
+  color: hsl(193, 38%, 86%);
+  font-weight: 600;
+  padding: 0px 0.625rem;
+  margin-bottom: 3.75rem;
+  overflow: hidden;
+}
+
+.advice__divider{
+  position: fixed;
+  top: 48%;
+
+}
+.advice__button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(82, 255, 168);
+  position: fixed;
+  top: 53%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.advice__button:active{
+    transition: box-shadow ease-in-out 0.2s;
+    box-shadow: 1px 20px 3px 5px rgba(82,255,168,0.75);
+    -webkit-box-shadow: 1px 3px 40px 5px rgba(82,255,168,0.75);
+    -moz-box-shadow: 1px 3px 10px 10px rgba(82,255,168,0.75);
+}
+
+.advice__attribution{
+  font-size: 16px;
+  font-weight: 600;
+  color:hsl(193, 38%, 86%);
+  margin: 0 10px;
+  text-align: center;
+  word-spacing: 4px;
+}
+
+.advice__attribution > a{
+  color: rgb(82, 255, 168);
+}
+
+@media  screen and (max-width:768px) {
+
+  body{
+    font-size: 14px;
+  }
+
+  .advice__divider{
+    position: fixed;
+    top: 44%;
+    height: 3%;
+    width: 40%;
+  }
+
+  .advice__button {
+    top: 51%;
+  }
+}
+
+@media  screen and (max-width:375px) {
+  .advice {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .advice__id {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .advice__text {
+    font-size: 28px;
+    padding: 0px 0.625rem;
+    margin-bottom: 2.5rem;
+    word-wrap: break-word;
+  }
+
+  .advice__divider{
+    position: fixed;
+    top: 50%;
+    height: 3%;
+    width: 80%;
+
+  }
+  .advice__button {
+    width: 4.0625rem;
+    height: 4.0625rem;
+    top: 56%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .attribution{
+    font-size: 1.125rem;
+  }
+  
+}
